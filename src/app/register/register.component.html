@@ -1,0 +1,24 @@
+<h2>Register Form </h2>
+<form [formGroup]="RegisterFormGroup" class="form-group" (ngSubmit)="savedata()">
+<table class="table ">
+   <tr>
+     <th> User Name :</th>
+     <th><input class="form-control" type="text" formControlName="username"></th>
+   </tr>
+   <tr>
+     <th>Password :</th>
+     <th><input class="form-control" type="password" formControlName="password"></th>
+   </tr>
+  <tr>
+    <th>Email :</th>
+     <th><input class="form-control" type="email" formControlName="email"></th>
+  </tr>
+  <tr>
+    <th colspan="2">
+      <input class="btn btn-outline-primary" type="submit" value="Register" [disabled]="RegisterFormGroup.invalid">
+      <input class="btn btn-outline-info" type="reset" value="Clear">
+    </th>
+  </tr>
+</table>
+</form>
+<h3>{{msg}}</h3>
