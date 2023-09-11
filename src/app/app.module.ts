@@ -9,6 +9,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { RestComponentComponent } from './rest-component/rest-component.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import {ReactiveFormsModule} from "@angular/forms";
     ContactUsComponent,
     AboutusComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    RestComponentComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
